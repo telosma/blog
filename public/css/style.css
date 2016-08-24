@@ -1,0 +1,10 @@
+.row{
+	margin-bottom: 0;
+}
+.fa-facebook-official{
+	color: rgb(32, 32, 150); 
+	float:right;
+}
+.fa-facebook-official:hover{
+	color:#959595;
+}
