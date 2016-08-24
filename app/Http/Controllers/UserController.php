@@ -26,7 +26,7 @@ class UserController extends Controller
     	$user->name = $user_name;
     	$user->password = $password;
     	$user->role = "normal";
-
+        
         $user->save();
     	// Auth::check($user);
     	return redirect()->route('dashboard');
@@ -36,6 +36,7 @@ class UserController extends Controller
     		return redirect()->route('dashboard');
     	}else{
     		return redirect()->back();
+                    
     	}
 
     }
