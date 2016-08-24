@@ -5,7 +5,7 @@ use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-
+use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     public function getHome(){
@@ -21,18 +21,18 @@ class UserController extends Controller
     	$user_name = $request['user_name'];
     	$password = bcrypt($request['pass']);
 
-    	$user = new User();
+        $user = new User();
     	$user->email = $email;
     	$user->name = $user_name;
     	$user->password = $password;
     	$user->role = "normal";
 
         $user->save();
-    	// Auth::check($user);
+    	Auth::login($user);
     	return redirect()->route('dashboard');
     }
     public function postSignIn(Request $request){
-    	if ( Auth::attemp(['email' => $request['email'], 'password' => $request['pass']]) ){
+    	if ( Auth::attempt(['email' => $request['email'], 'password' => $request['pass']]) ){
     		return redirect()->route('dashboard');
     	}else{
     		return redirect()->back();
