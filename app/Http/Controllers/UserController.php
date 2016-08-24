@@ -23,11 +23,11 @@ class UserController extends Controller
 
     	$user = new User();
     	$user->email = $email;
-    	$user->user_name = $user_name;
+    	$user->name = $user_name;
     	$user->password = $password;
     	$user->role = "normal";
-    	$user->save();
 
+        $user->save();
     	// Auth::check($user);
     	return redirect()->route('dashboard');
     }
