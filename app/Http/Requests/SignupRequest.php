@@ -6,6 +6,7 @@ use App\Http\Requests\Request;
 
 class SignupRequest extends Request
 {
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -24,9 +25,9 @@ class SignupRequest extends Request
     public function rules()
     {
         return [
-            'email'=> 'email|unique:users',
+            'email' => 'email|unique:users',
             'user_name' => 'required|max:100',
-            'password'  => 'required|min:6'
+            'password' => 'required|min:6'
         ];
     }
 
@@ -35,6 +36,7 @@ class SignupRequest extends Request
         return [
             'email.required' => 'ban chua nhap email',
             'password.required' => 'ban chua nhap mat khau'
-        ]
+        ];
     }
+
 }
