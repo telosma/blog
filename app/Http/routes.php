@@ -13,22 +13,27 @@
 
 
 
-Route::group(['middleware' => ['web']], function() {
+//Route::group(['middleware' => ['web']], function() {
 
-    Route::get('/', 'UserController@getHome');
+Route::get('/', 'UserController@getHome');
 
-    Route::get('/dashboard', [
-        'uses' => 'UserController@getDashboard',
-        'as' => 'dashboard'
-    ]);
+Route::get('/dashboard', [
+    'uses' => 'UserController@getDashboard',
+    'as' => 'dashboard'
+]);
 
-    Route::post('/user/signin', [
-        'uses' => 'UserController@postSignIn',
-        'as' => 'signin'
-    ]);
+Route::post('/user/signin', [
+    'uses' => 'UserController@postSignIn',
+    'as' => 'signin'
+]);
 
-    Route::post('/user/signup', [
-        'uses' => 'UserController@postSignUp',
-        'as' => 'signup'
-    ]);
-});
+Route::post('/user/signup', [
+    'uses' => 'UserController@postSignUp',
+    'as' => 'signup'
+]);
+//});
+
+Route::get('home', [
+    'uses' => 'HomeController@index',
+    'as' => 'home'
+]);
