@@ -15,12 +15,14 @@
 
 Route::group(['middleware'=>['web']], function(){
 
-	Route::get('/', 'UserController@getHome');
-
+	Route::get('/', [
+			'uses' => 'UserController@getHome',
+			'as' => 'home'
+		]);
 	Route::get('/dashboard', [
 			'uses' => 'UserController@getDashboard',
-			'as' => 'dashboard'
-
+			'as' => 'dashboard',
+			'middleware' => 'auth',
 		]);
 
 	Route::post('/user/signin', [
