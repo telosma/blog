@@ -1,6 +1,7 @@
-@extends('layouts.master')
+@extends('layouts.user')
 
 @section('content')
+<<<<<<< HEAD:resources/views/home/index.blade.php
 	
 	@if( count($errors) > 0 )
 		<div class="row">
@@ -17,6 +18,24 @@
 	@endif
 	
 	
+=======
+        
+        @if ( count($errors) > 0)
+        <div class="row">
+            <div class="col-md-6">
+                <ul>
+                @foreach($errors->all() as $error)
+                <li>
+                    {{ $error }}
+                </li>
+                @endforeach
+                </ul>
+            </div>
+        </div>
+        @endif
+
+
+>>>>>>> b341588afc813179008bd5ee15208805bc53bdd4:resources/views/home.blade.php
   	<div class="modal fade" id="signupModal" role="dialog">
     	<div class="modal-dialog">
 			<div class="row">

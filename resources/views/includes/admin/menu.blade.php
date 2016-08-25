@@ -25,7 +25,7 @@
                 <li><a href="#"><i class="fa fa-gear fa-fw"></i> Cài đặt</a>
                 </li>
                 <li class="divider"></li>
-                <li><a href="{!! route('admin.getLogout') !!}"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a>
+                <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a>
                 </li>
             </ul>
             <!-- /.dropdown-user -->
@@ -53,48 +53,36 @@
                 </li>
 
                 <li>
-                    <a href="{!! route('getHome') !!}"><i class="fa fa-home fa-fw"></i> Trang chủ web</a>
+                    <a href=""><i class="fa fa-home fa-fw"></i> Trang chủ web</a>
                 </li>
 
                 <li>
-                    <a href="{!! route('admin.home') !!}"><i class="fa fa-dashboard fa-fw"></i> Thống kê</a>
+                    <a href=""><i class="fa fa-dashboard fa-fw"></i> Thống kê</a>
                 </li>
 
                 <li>
                     <a href="#"><i class="fa fa-file-word-o fa-fw"></i> Quản lý từ<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="{!! url('admin/words/add') !!}">Thêm từ mới</a>
+                            <a href="">Thêm từ mới</a>
                         </li>
                         <li>
-                            <a href="{!! route('admin.word.getList') !!}">Danh sách từ</a>
+                            <a href="">Danh sách từ</a>
                         </li>
                         <li>
-                            <a href="{!! route('admin.word.getUdate') !!}">Update từ chưa học cho thành viên</a>
+                            <a href="">Update từ chưa học cho thành viên</a>
                         </li>
                     </ul>
                 </li>
-
-                <!--                <li>
-                                    <a href="#"><i class="fa fa-file-text-o fa-fw"></i> Quản lý câu ví dụ<span class="fa arrow"></span></a>
-                                    <ul class="nav nav-second-level">
-                                        <li>
-                                            <a href="{!! route('admin.example.getAdd') !!}">Thêm câu mới</a>
-                                        </li>
-                                        <li>
-                                            <a href="{!! route('admin.example.getList') !!}">Danh sách câu ví dụ</a>
-                                        </li>
-                                    </ul>
-                                </li>-->
 
                 <li>
                     <a href="#"><i class="fa fa-group fa-fw"></i> Quản lý thành viên<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="{!! route('admin.user.getAdd') !!}">Thêm thành viên mới</a>
+                            <a href="">Thêm thành viên mới</a>
                         </li>
                         <li>
-                            <a href="{!! route('admin.user.getList') !!}">Danh sách thành viên</a>
+                            <a href="">Danh sách thành viên</a>
                         </li>
                     </ul>
                 </li>

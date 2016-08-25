@@ -5,37 +5,37 @@
 
         <meta charset="utf-8">
 
-        <title>Admin - 600 word for toeic</title>
+        <title>Admin - Blog</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="{!! url('/css/bootstrap.min.css') !!}" rel="stylesheet">
+        <link href="{!! url('lib/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet">
 
         <!-- MetisMenu CSS -->
-        <link href="{!! url('/css/metisMenu.min.css') !!}" rel="stylesheet">
+        <link href="{!! url('lib/metisMenu/css/metisMenu.min.css') !!}" rel="stylesheet">
 
         <!-- DataTables CSS -->
-        <link href="{!! url('/css/dataTables.bootstrap.css') !!}" rel="stylesheet">
+        <link href="{!! url('lib/dataTable/css/dataTables.bootstrap.css') !!}" rel="stylesheet">
 
         <!-- Select DataTables CSS -->
-        <link href="{!! url('/css/select.dataTables.css') !!}" rel="stylesheet">
+        <link href="{!! url('lib/dataTable/css/select.dataTables.css') !!}" rel="stylesheet">
 
         <!-- DataTables Responsive CSS -->
-        <link href="{!! url('/css/jquery.dataTables.css') !!}" rel="stylesheet">
+        <link href="{!! url('lib/dataTable/css/jquery.dataTables.css') !!}" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="{!! url('/css/sb-admin-2.css') !!}" rel="stylesheet">
+        <link href="{!! url('css/sb-admin-2.css') !!}" rel="stylesheet">
 
         <!-- My CSS -->
-        <link href="{!! url('/css/mystyle.css') !!}" rel="stylesheet">
+        <!--<link href="{!! url('/css/style.css') !!}" rel="stylesheet">-->
 
         <!-- Custom Fonts -->
-        <link href="{!! url('/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet">
+        <link href="{!! url('lib/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet">
 
         <!-- List CSS -->
-        <link href="{!! url('/css/list.css') !!}" rel="stylesheet">
+        <!--<link href="{!! url('/css/list.css') !!}" rel="stylesheet">-->
 
         <!-- Effeckt CSS-->
-        <link href="{!! url('/css/effeckt.css') !!}" rel="stylesheet">
+        <!--<link href="{!! url('/css/effeckt.css') !!}" rel="stylesheet">-->
 
         @yield('style')
 
@@ -80,19 +80,19 @@
         <!-- /#wrapper -->
 
         <!-- jQuery -->
-        <script src="{!! url('/js/jquery-2.2.0.min.js') !!}"></script>
+        <script src="{!! url('lib/jquery/jquery-2.2.0.min.js') !!}"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="{!! url('/js/bootstrap.min.js') !!}"></script>
+        <script src="{!! url('lib/bootstrap/js/bootstrap.min.js') !!}"></script>
 
         <!-- Metis Menu Plugin JavaScript -->
-        <script src="{!! url('/js/metisMenu.min.js') !!}"></script>
+        <script src="{!! url('lib/metisMenu/js/metisMenu.min.js') !!}"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="{!! url('/js/sb-admin-2.js') !!}"></script>
+        <script src="{!! url('js/sb-admin-2.js') !!}"></script>
 
         <!-- My JavaScript -->
-        <script src="{!! url('/js/myscript.js') !!}"></script>
+        <script src="{!! url('js/adminScript.js') !!}"></script>
 
         @yield('script')
 
