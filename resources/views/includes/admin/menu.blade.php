@@ -13,7 +13,7 @@
     <!-- /.navbar-header -->
 
     <ul class="nav navbar-top-links navbar-right">
-        @include('admin.alert')
+        @include('includes.admin.alert')
         <!-- Người dùng -->
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">

@@ -16,7 +16,7 @@
 </head>
 <body>
 
-	@include('includes.header')
+	@include('includes.user.header')
 	@yield('content')
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="{{ url('lib/bootstrap/js/bootstrap.min.js') }}" type="text/javascript" charset="utf-8" async defer></script>

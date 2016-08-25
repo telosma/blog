@@ -10,12 +10,9 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     public function getHome(){
-    	return view('home.index');
+    	return view('home');
     }
 
-    public function getDashboard(){
-    	return view('dashboard');
-    }
 
     public function postSignUp(Request $request){
         $this->validate($request, [
@@ -35,15 +32,15 @@ class UserController extends Controller
         
         $user->save();
     	Auth::login($user);
-    	return redirect()->route('dashboard');
+    	return redirect()->route('home');
     }
     public function postSignIn(Request $request){
-        return redirect()->route('dashboard')->withErrors([
-                            'error' => "getFailedLoginMessage",
-        ]);
-        
+        // return redirect()->route('home')->withErrors([
+        //                     'error' => "getFailedLoginMessage",
+        // ]);
+        return redirect()->route('home');
     	if ( Auth::attempt(['email' => $request['email'], 'password' => $request['pass']]) ){
-    		return redirect()->route('dashboard');
+    		return redirect()->route('home');
     	}else{
     		return redirect()->back();
     	}

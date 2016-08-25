@@ -44,7 +44,7 @@
     <body>
 
         <div id="wrapper">
-            @include('admin.menu')
+            @include('includes.admin.menu')
             <div id="page-wrapper">
 
                 <div class="row">
@@ -62,10 +62,10 @@
 
                             <div class="panel-body">
                                 <!-- Trang thông báo lỗi-->
-                                @include('block.error')
+                                @include('includes.error')
 
                                 <!-- Trang tin nhắn -->
-                                @include('block.message')
+                                @include('includes.message')
                                 
                                 <!-- Nội dung chính-->
                                 @yield('content')
