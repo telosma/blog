@@ -39,4 +39,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+    'client_id' => '289710371386992',
+    'client_secret' => '1e1d8f2055bac4b3647d8a1608de7590',
+    'redirect' => 'http://blog.fr.com/auth/facebook/callback',
+],
 ];

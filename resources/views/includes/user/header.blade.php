@@ -11,9 +11,12 @@
       </button>
       <a class="navbar-brand" href="{{ url('/') }}">Brand</a>
     </div>
+    @if ( !Auth::check() )
     <button style="float:right; margin-top:5px;" id="btn-signup" class="btn btn-success">Sign up</button>
     <button style="float:right; margin:5px 10px 0 0;" id="btn-signin" class="btn btn-success" >Sign In</button>
-    
+    @else
+    <a href="{{ route('user.logout') }}" class="btn btn-success" style="float:right"; >Log out</a>
+    @endif
   </div><!-- /.container-fluid -->
 
 </nav>
