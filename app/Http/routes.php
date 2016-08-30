@@ -21,6 +21,6 @@ Route::post('/user/signup', [
 //});
 
 Route::get('home', [
-    'uses' => 'UserController@getHome',
+    'uses' => 'UserController@getAll',
     'as' => 'home'
 ]);

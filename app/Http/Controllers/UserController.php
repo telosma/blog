@@ -1,49 +1,66 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\SignupRequest;
-
-use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
+use App\Repositories\Constract\UserRepositoryInterface;
+
 class UserController extends Controller
 {
-    public function getHome(){
-    	return view('home');
+
+    protected $userRepositoryInterface;
+
+    public function __construct(UserRepositoryInterface $userRepositoryInterface)
+    {
+        $this->userRepositoryInterface = $userRepositoryInterface;
     }
 
+    public function getHome()
+    {
+        return view('home');
+    }
 
-    public function postSignUp(Request $request){
+    public function postSignUp(Request $request)
+    {
         $this->validate($request, [
-                'email'     => 'required|email|unique:users',
-                'user_name' => 'required|max:100',
-                'pass'  => 'required|min:6'
-            ]);
-    	$email = $request['email'];
-    	$user_name = $request['user_name'];
-    	$password = bcrypt($request['pass']);
+            'email' => 'required|email|unique:users',
+            'user_name' => 'required|max:100',
+            'pass' => 'required|min:6'
+        ]);
+        $email = $request['email'];
+        $user_name = $request['user_name'];
+        $password = bcrypt($request['pass']);
 
         $user = new User();
-    	$user->email = $email;
-    	$user->name = $user_name;
-    	$user->password = $password;
-    	$user->role = "normal";
-        
+        $user->email = $email;
+        $user->name = $user_name;
+        $user->password = $password;
+        $user->role = "normal";
+
         $user->save();
-    	Auth::login($user);
-    	return redirect()->route('home');
+        Auth::login($user);
+        return redirect()->route('home');
     }
-    public function postSignIn(Request $request){
+
+    public function postSignIn(Request $request)
+    {
         // return redirect()->route('home')->withErrors([
         //                     'error' => "getFailedLoginMessage",
         // ]);
         return redirect()->route('home');
-    	if ( Auth::attempt(['email' => $request['email'], 'password' => $request['pass']]) ){
-    		return redirect()->route('home');
-    	}else{
-    		return redirect()->back();
-    	}
-
+        if (Auth::attempt(['email' => $request['email'], 'password' => $request['pass']])) {
+            return redirect()->route('home');
+        } else {
+            return redirect()->back();
+        }
     }
+
+    public function getAll()
+    {
+        return dd($this->userRepositoryInterface->getAll());
+    }
+
 }
